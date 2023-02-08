@@ -1,0 +1,20 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap_custom";
+@import "font-awesome";
+
+@import "neumo";
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.input-group-prepend {
+    margin-right: -0.0625rem;
+    .input-group-text {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+.input-group-append, .input-group-prepend {
+    display: flex;
+}

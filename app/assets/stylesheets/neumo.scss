@@ -1,0 +1,80 @@
+.card.neumo {
+    $color: map-get($map: $theme-colors, $key: "violet");
+    $border: #d1d9e6;
+    $background: map-get($map: $theme-colors, $key: "neumo");
+    box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff!important;
+    border: 0.0625rem solid rgba(243,247,250,.05);
+    border-color: $border!important;
+    border-radius: 0.55rem;
+    background-color: $background!important;
+    .card-header {
+        background: 0 0;
+        border-bottom: 0.0625rem solid rgba(243,247,250,.05);
+    }
+    .card-body {
+        padding: 1.5rem;
+    }
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    .input-group {
+        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+        border-radius: 0.55rem;
+        transition: all .2s ease;
+    }
+    .input-group-text {
+        font-size: .875rem;
+        transition: all .3s ease-in-out;
+    }
+    .form-control {
+        color: $color;
+        background-color: $background;
+        border-color: $border;
+        font-size: 1rem;
+        border-radius: 0.55rem;
+        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        font-size: .875rem;
+    }
+}
+
+.btn-neumo {
+    $color: map-get($map: $theme-colors, $key: "violet");
+    $border: #d1d9e6;
+    $background: map-get($map: $theme-colors, $key: "neumo");
+    $hover-color: map-get($map: $theme-colors, $key: "violet");
+    $hover-border: map-get($map: $theme-colors, $key: "neumo");
+    $hover-background: map-get($map: $theme-colors, $key: "neumo");
+    @include button-variant(
+        $background,
+        $border,
+        $color,
+        $hover-background,
+        $hover-border,
+        $hover-color,
+        );
+    position: relative;
+    transition: all .2s ease;
+    letter-spacing: .025em;
+    font-size: 1rem;
+    box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+    border: 0.0625rem solid transparent;
+    border-radius: 0.55rem;
+    &:hover {
+        color: $hover-color;
+        background-color: $hover-background!important;
+        border-color: $hover-border;
+        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    }
+
+    .btn-check:focus + &,
+    &:focus {
+        color: map-get($map: $theme-colors, $key: "violet");
+        background-color: map-get($map: $theme-colors, $key: "neumo");
+        border-color: map-get($map: $theme-colors, $key: "neumo");
+        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    }
+}
